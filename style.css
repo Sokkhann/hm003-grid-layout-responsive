@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color:rgb(2, 80, 2);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  width: 600px;
+}
+
+.login button {
+  background-color: white;
+  color: rgb(2, 80, 2);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 120px;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.grid-container {
+  column-count: 1;
+  column-gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}
+
+.grid-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 30%;
+  max-height: 100%;
+}
+
+.modal:target {
+  display: block;
+}
+
+/* Close button styles */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: #999;
+}
+
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .search input {
+      width: 70%;
+  }
+
+  .login {
+      display: none;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Tablet */
+  .grid-container {
+      column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Laptop */
+  .grid-container {
+      column-count: 4;
+  }
+}
